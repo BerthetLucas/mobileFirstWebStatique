@@ -36,7 +36,7 @@
         <i class="fa fa-bars" aria-hidden="true"></i>
         </a>
 
-        <a href="#home" class="w3-item w3-button">Home</a>
+        <a href="#home" class="w3-item w3-button" onclick="homeHideNavbar()">Home</a>
         <a href="#about" class="w3-item w3-button w3-hide-small">About</a>
         <a href="#portfolio" class="w3-item w3-button w3-hide-small">Portfolio</a>
         <a href="#contact" class="w3-item w3-button w3-hide-small">Contact</a>
@@ -105,6 +105,14 @@
         console.log(nav.classList)
         
         }
+
+    function homeHideNavbar(){
+        const nav = document.getElementById("mobileNav");
+
+        if (nav.classList.contains("w3-show")){
+            nav.classList.remove("w3-show");
+        }};
+    
 </script>
 
 </html>
