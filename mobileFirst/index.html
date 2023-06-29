@@ -41,6 +41,7 @@
             background-position: center;
             background-size : cover;
             z-index: 3;
+            border-radius : 15px
             
         }
 
@@ -48,7 +49,8 @@
             background-image: url(./assets/img/piano.jpg);
             background-position: center;
             background-size : cover;
-            height : 100px
+            height : 100px;
+            border-radius : 15px 
         }
 
         #contact-en-tete{
@@ -57,20 +59,36 @@
             background-size : cover;
             height : 100px;
             background-attachment: fixed;
+            border-radius : 15px 
+
         }
 
         #btnToTop {
             z-index: 3;
             position: fixed;
-       
         }
+
+        header, nav a {
+            background-color: rgb(238, 232, 180);
+        }
+
+        .container-form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+   
+        }
+        
+    
+
     </style>
 
 </head>
 <body>
 
     <!-- HEADER START -->
-    <header class="w3-top w3-white">
+    <header class="w3-top">
     
 
     <!-- NAV BAR DESKTOP -->
@@ -111,11 +129,16 @@
             <div class="w3-row">
                 <div class="w3-half"><img src="./assets/img/guitariste.png" class="w3-image w3-padding"> </div>
 
-                <div class="w3-half w3-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore culpa perspiciatis cupiditate harum temporibus deserunt? Magnam ut tempore est adipisci consectetur ab expedita! Consequatur veniam sequi voluptas culpa fuga suscipit odit numquam consequuntur quae. Recusandae temporibus non sunt officiis dolore repudiandae itaque rem eius vitae ea corrupti consequatur nisi deserunt, sequi provident cum neque dicta odio voluptate explicabo voluptatem ex doloremque dolores suscipit. Eius, earum magnam modi iste suscipit itaque quaerat deserunt! Et est iusto consequatur odio dolore ut dolores nihil necessitatibus libero. Officiis nemo similique tempora voluptate perspiciatis impedit reprehenderit unde alias eum, assumenda rem velit consequuntur totam veniam, natus dolore ipsum officia repudiandae quidem ad voluptatum minus expedita 
+                <div class="w3-half w3-justify">Polyphonie est un studio de musique innovant qui offre une expérience exceptionnelle aux artistes et aux passionnés de musique. Situé dans un cadre inspirant, notre studio offre un espace de création et d'enregistrement professionnel pour tous les genres musicaux. Que vous soyez un groupe de rock en quête du son parfait ou un artiste solo cherchant à donner vie à vos compositions, Polyphonie est l'endroit idéal <br> <br>
+                    pour concrétiser vos projets musicaux. Notre studio est équipé des dernières technologies audio, garantissant une qualité sonore exceptionnelle. Des microphones de pointe aux consoles de mixage haut de gamme, nous mettons à votre disposition tous les outils nécessaires pour capturer chaque nuance et chaque instrument de votre musique. De plus, notre équipe d'ingénieurs du son expérimentés est là pour vous guider tout au long du processus d'enregistrement et de production, afin de vous aider à atteindre le son que vous désirez.
 
                 </div>
             </div>
-            <p class="w3-justify">Test pour voir sur les commit fonctionnent hahahahahahaha rlet's gooooooooooo m sequi voluptas culpa fuga suscipit odit numquam consequuntur quae. Recusandae temporibus non sunt officiis dolore repudiandae itaque rem eius vitae ea corrupti consequatur nisi deserunt, sequi provident cum neque dicta odio voluptate explicabo voluptatem ex doloremque dolores suscipit. Eius, earum magnam modi iste suscipit itaque quaerat deserunt! Et est iusto consequatur odio dolore ut dolores nihil necessitatibus libero. Officiis nemo similique tempora voluptate perspiciatis impedit reprehenderit unde alias eum, assumenda rem velit consequuntur totam veniam, natus dolore ipsum officia repudiandae quidem ad voluptatum minus expedita </p>
+            <p class="w3-justify">Chez Polyphonie, nous croyons en la collaboration et en la créativité. Nous encourageons les artistes à explorer de nouvelles idées et à expérimenter           différents styles musicaux. Que vous souhaitiez enregistrer un album complet, créer une démo professionnelle ou simplement travailler sur une chanson, notre    studio est conçu pour répondre à vos besoins.
+
+                En plus de nos installations d'enregistrement de pointe, nous offrons également des services de mixage et de mastering pour donner la touche finale à votre musique. Notre équipe compétente et passionnée mettra tout en œuvre pour vous aider à réaliser vos objectifs musicaux et faire ressortir le meilleur de votre talent.
+                
+                Polyphonie n'est pas seulement un studio, c'est aussi une communauté de musiciens et de créateurs. Nous organisons régulièrement des événements et des ateliers pour favoriser les rencontres et les échanges entre artistes. Que vous soyez un musicien émergent ou établi, Polyphonie est l'endroit idéal pour donner vie à vos projets musicaux et faire partie d'une communauté dynamique et inspirante.</p>
         </section>
 
         <a href=#home class="w3-hide" id="btnToTop" onscroll="btnShow()"><button class="w3-display-right w3-button"  onscroll="btnShow ()"><i class="fa fa-arrow-circle-up fa-5x " aria-hidden="true"></i></button></a>
@@ -129,18 +152,18 @@
             <div class="w3-row w3-center">
             <article class="w3-col m4">
             <h3>Opéra</h3>
-            <img src="./assets/img/opera.jpg" class="w3-image" alt="image de chevaux">
+            <img src="./assets/img/opera.jpg" class="w3-image" alt="opéra" id="portfolio-img">
             </article>
 
             <article class="w3-col m4 w3-center">
             <h3>Concert</h3>
-            <img src="./assets/img/concert.jpg" class="w3-image" alt="image de chevaux">
+            <img src="./assets/img/concert.jpg" class="w3-image" alt="concert" id="portfolio-img">
             
             </article>
 
             <article class="w3-col m4 w3-center">
             <h3>Studio</h3>
-            <img src="./assets/img/studio.jpg" class="w3-image" alt="image de chevaux"></article>
+            <img src="./assets/img/studio.jpg" class="w3-image" alt="studio" id="portfolio-img"></article>
              </div>  
         </section>
 
@@ -150,7 +173,49 @@
             <div id="contact-en-tete" class="w3-display-container">
             <h2 class="w3-display-middle">Contact</h2>
             </div>
-            <p class="w3-justify">Lorem ipsum dolor sit amet consectetyoupi tralala  culpa perspiciatis cupiditate harum temporibus deserunt? Magnam ut tempore est adipisci consectetur ab expedita! Consequatur veniam sequi voluptas culpa fuga suscipit odit numquam consequuntur quae. Recusandae temporibus non sunt officiis dolore repudiandae itaque rem eius vitae ea corrupti consequatur nisi deserunt, sequi provident cum neque dicta odio voluptate explicabo voluptatem ex doloremque dolores suscipit. Eius, earum magnam modi iste suscipit itaque quaerat deserunt! Et est iusto consequatur odio dolore ut dolores nihil necessitatibus libero. Officiis nemo similique tempora voluptate perspiciatis impedit reprehenderit unde alias eum, assumenda rem velit consequuntur totam veniam, natus dolore ipsum officia repudiandae quidem ad voluptatum minus expedita laborum provident. Officia sed odio odit deserunt est rerum in repellendus. Inventore quae beatae laborum quasi aperiam aliquam perferendis, dolor totam numquam adipisci delectus molestiae eaque quidem voluptatem veniam. Vel quam assumenda non ex temporibus animi placeat similique quibusdam illum beatae voluptatem, maxime eligendi at facilis architecto accusantium, perspiciatis nesciunt nisi obcaecati reprehenderit minus. Eligendi magnam soluta commodi rem? Accusamus placeat unde pariatur id. Ullam quo temporibus perspiciatis animi in, aliquam a nobis sapiente ab facere nesciunt sit, voluptate atque, error deserunt laboriosam explicabo mollitia? Dolor id nostrum reiciendis beatae obcaecati eveniet, quos facere fuga eaque dolores temporibus nemo quasi quaerat sed necessitatibus voluptatum facilis nesciunt aliquam odit nisi porro magni accusantium ullam. Inventore, velit animi? Laborum ex provident eum, obcaecati sunt quos voluptatibus dolor laudantium itaque reiciendis nostrum odio repudiandae expedita facere quo ratione id porro ab fugit?</p>
+            
+            <form class="w3-margin w3-hide-medium w3-hide-large"action="traitement_formulaire.php" method="POST">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required class="w3-right"><br><br>
+        
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required class="w3-right"><br><br>
+        
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" required class="w3-right"><br><br>
+        
+                <label for="email">E-Mail :</label>
+                <input type="email" id="email" name="email" required class="w3-right"><br><br>
+        
+                <label for="message">Message :</label><br>
+                <textarea id="message" name="message" ></textarea><br><br>
+        
+                <input type="submit" value="Envoyer" class="w3-black w3-round-xxlarge">
+            </form>
+
+        
+            <div class="container-form">
+            <form class="w3-margin w3-hide-small "action="traitement_formulaire.php" method="POST">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required><br><br>
+        
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required><br><br>
+        
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" required><br><br>
+        
+                <label for="email">E-Mail :</label>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="message">Message :</label><br>
+                <textarea id="message" name="message" ></textarea><br><br>
+        
+                <input type="submit" value="Envoyer" class="w3-black w3-round-xxlarge">
+            </form>
+        </div>
+
+        </div>
         </section>
 
     </main>
