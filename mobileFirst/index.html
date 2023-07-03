@@ -115,13 +115,8 @@
             color : white
         }
         
-        #saxophoniste {
-            height : 20em;
-            width : auto
-        }
-
         footer{
-            height : 10vh; 
+            height : 15vh; 
             background-color: black;
         }
 
@@ -134,7 +129,15 @@
             color : white;
             font-style : bold;
         }
-    
+
+        @media screen and (min-width: 1090px){
+
+            #saxophoniste {
+            width : 30em
+        }
+
+        }
+            
     </style>
 
 </head>
@@ -183,24 +186,23 @@
             <h2 class="w3-black">About</h2>
     
             <div class="w3-row">
-                <div class="w3-half"><img src="./assets/img/guitariste.png" class="w3-image w3-padding"></div>
+                <div class="w3-half"><img src="./assets/img/guitariste.png" class="w3-image w3-padding" id="saxophoniste"></div>
 
-                <p class="w3-half w3-justify w3-padding">Polyphonie est un studio de musique innovant qui offre une expérience exceptionnelle aux artistes et aux passionnés de musique. Situé dans un cadre inspirant, notre studio offre un espace de création et d'enregistrement professionnel pour tous les genres musicaux. Que vous soyez un groupe de rock en quête du son parfait ou un artiste solo cherchant à donner vie à vos compositions, Polyphonie est l'endroit idéal 
-                pour concrétiser vos projets musicaux. Notre studio est équipé des dernières technologies audio, garantissant une qualité sonore exceptionnelle. Des microphones de pointe aux consoles de mixage haut de gamme, nous mettons à votre disposition tous les outils nécessaires pour capturer chaque nuance et chaque instrument de votre musique. De plus, notre équipe d'ingénieurs du son expérimentés est là pour vous guider tout au long du processus d'enregistrement et de production, afin de vous aider à atteindre le son que vous désirez.
+                <p class="w3-half w3-justify w3-padding" data-aos="fade-left">Polyphonie est un <b>studio de musique</b> innovant qui offre une expérience exceptionnelle aux artistes et aux passionnés de musique. Situé dans un cadre inspirant, notre studio offre un espace de création et d'enregistrement <b>professionnel</b> pour tous les genres musicaux. Que vous soyez un groupe de rock en quête du son parfait ou un artiste solo cherchant à donner vie à vos compositions, Polyphonie est <b>l'endroit idéal </b>
+                pour concrétiser vos projets musicaux. Notre studio est équipé des dernières technologies audio, garantissant une qualité sonore exceptionnelle. Des microphones de pointe aux consoles de mixage haut de gamme, nous mettons à votre disposition tous les outils nécessaires pour capturer chaque nuance et chaque instrument de votre musique. De plus, notre <b>équipe d'ingénieurs du son </b>expérimentés est là pour vous guider tout au long du processus d'enregistrement et de production, afin de vous aider à atteindre le son que vous désirez.
 
                 </p>
            
-                <p class="w3-half w3-justify w3-padding">Chez Polyphonie, nous croyons en la collaboration et en la créativité. Nous encourageons les artistes à explorer de nouvelles idées et à expérimenter           différents styles musicaux. Que vous souhaitiez enregistrer un album complet, créer une démo professionnelle ou simplement travailler sur une chanson, notre    studio est conçu pour répondre à vos besoins.
+                <p class="w3-half w3-justify w3-padding" data-aos="fade-right">Chez <b>Polyphonie</b>, nous croyons en la collaboration et en la créativité. Nous encourageons les artistes à explorer de nouvelles idées et à expérimenterdifférents styles musicaux. Que vous souhaitiez <b>enregistrer un album complet</b>, créer une démo professionnelle ou simplement travailler sur une chanson, notre    studio est conçu pour répondre à vos besoins.
 
                 En plus de nos installations d'enregistrement de pointe, nous offrons également des services de mixage et de mastering pour donner la touche finale à votre musique. Notre équipe compétente et passionnée mettra tout en œuvre pour vous aider à réaliser vos objectifs musicaux et faire ressortir le meilleur de votre talent.
                 
-                Polyphonie n'est pas seulement un studio, c'est aussi une communauté de musiciens et de créateurs. Nous organisons régulièrement des événements et des ateliers pour favoriser les rencontres et les échanges entre artistes. Que vous soyez un musicien émergent ou établi, Polyphonie est l'endroit idéal pour donner vie à vos projets musicaux et faire partie d'une communauté dynamique et inspirante.</p>
+                Polyphonie n'est pas seulement un studio, c'est aussi <b>une communauté de musiciens et de créateurs</b>. Nous organisons régulièrement des événements et des ateliers pour favoriser les rencontres et les échanges entre artistes. Que vous soyez un musicien émergent ou établi, Polyphonie est l'endroit idéal pour donner vie à vos projets musicaux et faire partie d'une communauté dynamique et inspirante.</p>
             </div>
             </section>
         </div >
 
-        <a href=#home class="w3-hide" id="btnToTop" onscroll="btnShow()"><button class="w3-display-right w3-button"  onscroll="btnShow ()"><i class="fa fa-arrow-circle-up fa-5x " aria-hidden="true"></i></button></a>
-
+      
         <!-- SECTION PORFOLIO-->
 
         <section id="portfolio">
@@ -252,7 +254,7 @@
 
         
             <div class="container-form">
-            <form class="w3-margin w3-hide-small "action="traitement_formulaire.php" method="POST" data-aos="zoom-in-down" data-aos-once="true">
+            <form class="w3-margin w3-hide-small "action="traitement_formulaire.php" method="POST" data-aos="zoom-in-down">
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" required><br><br>
         
@@ -279,16 +281,16 @@
 
    <!-- MAIN END  -->
 
-    <footer class="w3-margin-top w3-display-container">
+    <footer>
 
         <p class="w3-center">© POLYPHONIE RECORDS 2023</p>
 
       <div class="w3-center">  
         <img src="./assets/img/facebook.svg" alt="logo Facebook" class="w3-image w3-center w3-margin-right">
         <img src="./assets/img/twitter.svg" alt="logo twitter" class="w3-image w3-center w3-margin-left">
-    </div>
+        </div>
 
-    <a href="#" class="w3-right">Mentions légales</a>
+        <a href="#" class="w3-right">Mentions légales</a>
 
     </footer>
 
