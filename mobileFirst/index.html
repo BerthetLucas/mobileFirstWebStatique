@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Projet en mobile</title>
-    <meta name="description" content="Ici je met ka description de mon site web">
+    <meta name="description" content="Ici je met la description de mon site web">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./assets/img/logo.svg" type="image/svg+xml">
   
     <link rel="stylesheet" href="./assets/css/w3.css">
     <link rel="stylesheet" href="./assets/css/font-awesome.css">
     <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        @font-face {
+            font-family: Rockstrike ;
+            src: url("./assets/fonts/Rockstrike.otf");
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -37,12 +47,16 @@
         }
 
         #about{
-            background-image: url(./assets/img/chairs.jpg); 
+          
             background-position: center;
             background-size : cover;
             z-index: 3;
             border-radius : 15px
-            
+        }
+
+        .about-container{
+            background-color: #C9BF81;
+            border-radius: 15px;
         }
 
         #portfolio-en-tete{
@@ -60,7 +74,6 @@
             height : 100px;
             background-attachment: fixed;
             border-radius : 15px 
-
         }
 
         #btnToTop {
@@ -69,11 +82,10 @@
         }
 
         header, nav a {
-            background-color: rgb(238, 232, 180);
+            background-color: #FEDCC3;
         }
 
         .container-form{
-            width: 100%;
             display: flex;
             flex-direction: column;
             margin-left : 15em
@@ -82,9 +94,20 @@
         input {
             border : none;
         }
-        
-    
 
+        #logo {
+            height : 3em;
+            width : auto
+        }
+
+        h2, h3, p{
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        h1{
+            font-family: Rockstrike;
+        }
+        
     </style>
 
 </head>
@@ -100,7 +123,7 @@
         <i class="fa fa-bars" aria-hidden="true"></i>
         </a>
 
-        <a href="#home" class="w3-item w3-button" onclick="homeHideNavbar()">Home</a>
+        <a href="#home" class="w3-item w3-button" onclick="homeHideNavbar()"><img src="./assets/img/logo.svg" id="logo"></a>
         <a href="#about" class="w3-item w3-button w3-hide-small">About</a>
         <a href="#portfolio" class="w3-item w3-button w3-hide-small">Portfolio</a>
         <a href="#contact" class="w3-item w3-button w3-hide-small">Contact</a>
@@ -108,7 +131,7 @@
     <!-- NAV BAR MOBILE -->
     </nav>
 
-        <nav id="mobileNav" class="w3-bar-block w3-white w3-hide-medium w3-hide-large w3-hide">
+        <nav id="mobileNav" class="w3-bar-block w3-white w3-hide-medium w3-hide-large w3-hide w3-animate-top">
             <a href="#about" class="w3-bar-item w3-button" onclick="toggleNavBar()">About</a>
             <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleNavBar()">Porfolio</a>
             <a href="#contact" class="w3-bar-item w3-button" onclick="toggleNavBar()">Contact</a>
@@ -117,7 +140,7 @@
     </header>
 
     <section id="home" class="w3-display-container">
-        <h1 class="w3-display-middle w3-black w3-center">Mon site mobile !</h1>
+        <h1 class="w3-display-middle w3-black w3-center w3-padding">POLYPHONIE RECORDS</h1>
     </section>
 
   
@@ -125,24 +148,26 @@
     <main class="w3-container">
         <!-- SECTION ABOUT -->
 
-        <section id="about">
+        <div class="about-container">
+            <section id="about">
    
             <h2>About</h2>
     
             <div class="w3-row">
                 <div class="w3-half"><img src="./assets/img/guitariste.png" class="w3-image w3-padding"> </div>
 
-                <div class="w3-half w3-justify">Polyphonie est un studio de musique innovant qui offre une expérience exceptionnelle aux artistes et aux passionnés de musique. Situé dans un cadre inspirant, notre studio offre un espace de création et d'enregistrement professionnel pour tous les genres musicaux. Que vous soyez un groupe de rock en quête du son parfait ou un artiste solo cherchant à donner vie à vos compositions, Polyphonie est l'endroit idéal <br> <br>
-                    pour concrétiser vos projets musicaux. Notre studio est équipé des dernières technologies audio, garantissant une qualité sonore exceptionnelle. Des microphones de pointe aux consoles de mixage haut de gamme, nous mettons à votre disposition tous les outils nécessaires pour capturer chaque nuance et chaque instrument de votre musique. De plus, notre équipe d'ingénieurs du son expérimentés est là pour vous guider tout au long du processus d'enregistrement et de production, afin de vous aider à atteindre le son que vous désirez.
+                <p class="w3-half w3-justify w3-padding">Polyphonie est un studio de musique innovant qui offre une expérience exceptionnelle aux artistes et aux passionnés de musique. Situé dans un cadre inspirant, notre studio offre un espace de création et d'enregistrement professionnel pour tous les genres musicaux. Que vous soyez un groupe de rock en quête du son parfait ou un artiste solo cherchant à donner vie à vos compositions, Polyphonie est l'endroit idéal 
+                pour concrétiser vos projets musicaux. Notre studio est équipé des dernières technologies audio, garantissant une qualité sonore exceptionnelle. Des microphones de pointe aux consoles de mixage haut de gamme, nous mettons à votre disposition tous les outils nécessaires pour capturer chaque nuance et chaque instrument de votre musique. De plus, notre équipe d'ingénieurs du son expérimentés est là pour vous guider tout au long du processus d'enregistrement et de production, afin de vous aider à atteindre le son que vous désirez.
 
-                </div>
+                </p>
             </div>
-            <p class="w3-justify">Chez Polyphonie, nous croyons en la collaboration et en la créativité. Nous encourageons les artistes à explorer de nouvelles idées et à expérimenter           différents styles musicaux. Que vous souhaitiez enregistrer un album complet, créer une démo professionnelle ou simplement travailler sur une chanson, notre    studio est conçu pour répondre à vos besoins.
+            <p class="w3-justify w3-margin-right w3-margin-left w3-margin-bottom">Chez Polyphonie, nous croyons en la collaboration et en la créativité. Nous encourageons les artistes à explorer de nouvelles idées et à expérimenter           différents styles musicaux. Que vous souhaitiez enregistrer un album complet, créer une démo professionnelle ou simplement travailler sur une chanson, notre    studio est conçu pour répondre à vos besoins.
 
                 En plus de nos installations d'enregistrement de pointe, nous offrons également des services de mixage et de mastering pour donner la touche finale à votre musique. Notre équipe compétente et passionnée mettra tout en œuvre pour vous aider à réaliser vos objectifs musicaux et faire ressortir le meilleur de votre talent.
                 
                 Polyphonie n'est pas seulement un studio, c'est aussi une communauté de musiciens et de créateurs. Nous organisons régulièrement des événements et des ateliers pour favoriser les rencontres et les échanges entre artistes. Que vous soyez un musicien émergent ou établi, Polyphonie est l'endroit idéal pour donner vie à vos projets musicaux et faire partie d'une communauté dynamique et inspirante.</p>
-        </section>
+            </section>
+        </div >
 
         <a href=#home class="w3-hide" id="btnToTop" onscroll="btnShow()"><button class="w3-display-right w3-button"  onscroll="btnShow ()"><i class="fa fa-arrow-circle-up fa-5x " aria-hidden="true"></i></button></a>
 
@@ -155,18 +180,17 @@
             <div class="w3-row w3-center">
             <article class="w3-col m4">
             <h3>Opéra</h3>
-            <img src="./assets/img/opera.jpg" class="w3-image" alt="opéra" id="portfolio-img">
+            <img src="./assets/img/opera.jpg" class="w3-image w3-padding" alt="opéra" id="portfolio-img" data-aos="fade-right">
             </article>
-
             <article class="w3-col m4 w3-center">
             <h3>Concert</h3>
-            <img src="./assets/img/concert.jpg" class="w3-image" alt="concert" id="portfolio-img">
+            <img src="./assets/img/concert.jpg" class="w3-image w3-padding" alt="concert" id="portfolio-img" data-aos="fade-top">
             
             </article>
 
             <article class="w3-col m4 w3-center">
             <h3>Studio</h3>
-            <img src="./assets/img/studio.jpg" class="w3-image" alt="studio" id="portfolio-img"></article>
+            <img src="./assets/img/studio.jpg" class="w3-image w3-padding" alt="studio" id="portfolio-img" data-aos="fade-right"></article>
              </div>  
         </section>
 
@@ -177,7 +201,7 @@
             <h2 class="w3-display-middle">Contact</h2>
             </div>
             
-            <form class="w3-margin w3-hide-medium w3-hide-large"action="traitement_formulaire.php" method="POST">
+            <form class="w3-margin w3-hide-medium w3-hide-large"action="traitement_formulaire.php" method="POST" data-aos="zoom-in-down" data-aos-once="true">
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" required class="w3-right"><br><br>
         
@@ -198,7 +222,7 @@
 
         
             <div class="container-form">
-            <form class="w3-margin w3-hide-small "action="traitement_formulaire.php" method="POST">
+            <form class="w3-margin w3-hide-small "action="traitement_formulaire.php" method="POST" data-aos="zoom-in-down" data-aos-once="true">
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" required><br><br>
         
@@ -227,8 +251,13 @@
 
     <footer class="w3-margin-top">
 
+
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 
 </body>
 
