@@ -123,6 +123,15 @@
             font-style : bold;
         }
 
+        #btnToTop {
+            z-index: 5;
+            position: fixed;
+            bottom: 7em;
+            right: 15px;
+            background-color: rgba(248, 252, 249, 0);
+            border: 0;
+        }
+
         @media screen and (min-width: 1090px){
 
             #saxophoniste {
@@ -167,6 +176,11 @@
 
   
     <!-- DEBUT DU MAIN  -->
+
+    <button id="btnToTop" class="w3-animate-opacity w3-hide">
+        <a href="#top"><i class="fa fa-chevron-circle-up fa-4x"></i></a>
+    </button>
+
     <main class="w3-container">
 
         <h2 id="slogan" class="w3-center">L'espace de création qui écrit les grandes histoires</h2>
@@ -283,11 +297,29 @@
 
 </footer>
   
+<script>
+    
+    function displayScrollToTopBtn() {
+        const btn = document.getElementById("btnToTop");
+      
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            btn.classList.add("w3-show");
+        } else {
+            btn.classList.remove("w3-show");
+        }
+    }
+
+    window.addEventListener("scroll", function () {
+            displayScrollToTopBtn();
+        });
+
+</script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
       </script>
+
 <script>
     function toggleNavBar() {
 
@@ -296,6 +328,9 @@
         console.log(nav.classList)
         }
 </script>
+
+
+
 </body>
 
 
