@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.1">
     <title>POLYPHONIE RECORDS</title>
     <meta name="description" content="Ici je met la description de mon site web">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -40,17 +40,13 @@
             background-attachment: fixed;
            }
 
-        section h2 {
+        section h3 {
             text-align: center;
             font-weight: bold; 
             color : rgb(56, 53, 53)
         }
 
         #about{
-          
-            background-position: center;
-            background-size : cover;
-            z-index: 3;
             border-radius : 15px;
             font-size: 1.3em
         }
@@ -77,19 +73,14 @@
             border-radius : 15px 
         }
 
-        #btnToTop {
-            z-index: 3;
-            position: fixed;
-        }
-
         .container-form{
             display: flex;
             flex-direction: column;
-            margin-left : 15em
+          
         }
 
         input {
-            border : none;
+            border : 1px solid black;
         }
 
         #logo {
@@ -112,7 +103,9 @@
         
         #desktopNav{
             background-color: black;
-            color : white
+            color : white;
+            width : auto
+           
         }
         
         footer{
@@ -141,15 +134,14 @@
     </style>
 
 </head>
-<body>
 
+<body>
     <!-- HEADER START -->
     <header class="w3-top">
     
-
     <!-- NAV BAR DESKTOP -->
     <nav id="desktopNav" class="w3-bar">
-        <a href="javascript:void(0)" class=" w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" onclick="toggleNavBar()">
+        <a href="javascript:void(0)" class=" w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right" onclick="toggleNavBar()">
         <i class="fa fa-bars" aria-hidden="true" style="color : white"></i>
         </a>
 
@@ -161,10 +153,10 @@
     <!-- NAV BAR MOBILE -->
     </nav>
 
-        <nav id="mobileNav" class="w3-bar-block w3-hide-medium w3-hide-large w3-hide w3-animate-top">
-            <a href="#about" class="w3-bar-item w3-button" onclick="toggleNavBar()">About</a>
-            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleNavBar()">Porfolio</a>
-            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleNavBar()">Contact</a>
+    <nav id="mobileNav" class="w3-bar-block w3-hide-medium w3-hide-large w3-hide w3-animate-top">
+        <a href="#about" class="w3-bar-item w3-button" onclick="toggleNavBar()">About</a>
+        <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleNavBar()">Porfolio</a>
+        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleNavBar()">Contact</a>
         </nav>
 
     </header>
@@ -183,54 +175,52 @@
         <div class="about-container">
             <section id="about">
    
-            <h2 class="w3-black">About</h2>
+            <h3 class="w3-black">About</h3>
     
             <div class="w3-row">
                 <div class="w3-half"><img src="./mobileFirst/assets/img/guitariste.png" class="w3-image w3-padding" id="saxophoniste"></div>
 
-                <p class="w3-half w3-justify w3-padding" data-aos="fade-left">Polyphonie est un <b>studio de musique</b> innovant qui offre une expérience exceptionnelle aux artistes et aux passionnés de musique. Situé dans un cadre inspirant, notre studio offre un espace de création et d'enregistrement <b>professionnel</b> pour tous les genres musicaux. Que vous soyez un groupe de rock en quête du son parfait ou un artiste solo cherchant à donner vie à vos compositions, Polyphonie est <b>l'endroit idéal </b>
-                pour concrétiser vos projets musicaux. Notre studio est équipé des dernières technologies audio, garantissant une qualité sonore exceptionnelle. Des microphones de pointe aux consoles de mixage haut de gamme, nous mettons à votre disposition tous les outils nécessaires pour capturer chaque nuance et chaque instrument de votre musique. De plus, notre <b>équipe d'ingénieurs du son </b>expérimentés est là pour vous guider tout au long du processus d'enregistrement et de production, afin de vous aider à atteindre le son que vous désirez.
-
-                </p>
+                <p class="w3-half w3-justify w3-padding" data-aos="fade-top">Polyphonie est un <b>studio de musique</b> innovant qui offre une expérience exceptionnelle aux artistes et aux passionnés de musique. Situé dans un cadre inspirant, notre studio offre un espace de création et d'enregistrement <b>professionnel</b> pour tous les genres musicaux. Que vous soyez un groupe de rock en quête du son parfait ou un artiste solo cherchant à donner vie à vos compositions, Polyphonie est <b>l'endroit idéal </b>
+                pour concrétiser vos projets musicaux. Notre studio est équipé des dernières technologies audio, garantissant une qualité sonore exceptionnelle. Des microphones de pointe aux consoles de mixage haut de gamme, nous mettons à votre disposition tous les outils nécessaires pour capturer chaque nuance et chaque instrument de votre musique. De plus, notre <b>équipe d'ingénieurs du son </b>expérimentés est là pour vous guider tout au long du processus d'enregistrement et de production, afin de vous aider à atteindre le son que vous désirez.</p>
            
-                <p class="w3-half w3-justify w3-padding" data-aos="fade-right">Chez <b>Polyphonie</b>, nous croyons en la collaboration et en la créativité. Nous encourageons les artistes à explorer de nouvelles idées et à expérimenterdifférents styles musicaux. Que vous souhaitiez <b>enregistrer un album complet</b>, créer une démo professionnelle ou simplement travailler sur une chanson, notre    studio est conçu pour répondre à vos besoins.
+                <p class="w3-half w3-justify w3-padding" data-aos="fade-bottom">Chez <b>Polyphonie</b>, nous croyons en la collaboration et en la créativité. Nous encourageons les artistes à explorer de nouvelles idées et à expérimenterdifférents styles musicaux. Que vous souhaitiez <b>enregistrer un album complet</b>, créer une démo professionnelle ou simplement travailler sur une chanson, notre    studio est conçu pour répondre à vos besoins.
 
                 En plus de nos installations d'enregistrement de pointe, nous offrons également des services de mixage et de mastering pour donner la touche finale à votre musique. Notre équipe compétente et passionnée mettra tout en œuvre pour vous aider à réaliser vos objectifs musicaux et faire ressortir le meilleur de votre talent.
                 
                 Polyphonie n'est pas seulement un studio, c'est aussi <b>une communauté de musiciens et de créateurs</b>. Nous organisons régulièrement des événements et des ateliers pour favoriser les rencontres et les échanges entre artistes. Que vous soyez un musicien émergent ou établi, Polyphonie est l'endroit idéal pour donner vie à vos projets musicaux et faire partie d'une communauté dynamique et inspirante.</p>
             </div>
-            </section>
+            
         </div >
+        </section>
 
-      
         <!-- SECTION PORFOLIO-->
 
         <section id="portfolio">
-            <div id="portfolio-en-tete" class="w3-display-container">
-            <h2 class="w3-display-middle">Portfolio</h2>
+        <div id="portfolio-en-tete" class="w3-display-container">
+            <h3 class="w3-display-middle w3-black w3-padding">Portfolio</h3>
             </div>
             <div class="w3-row w3-center">
             <article class="w3-col m4">
-            <h3><b>Opéra</b></h3>
-            <img src="./mobileFirst/assets/img/opera.jpg" class="w3-image w3-padding" alt="opéra" id="portfolio-img" data-aos="fade-left">
+            <h4><b>Opéra</b></h4>
+            <img src="./mobileFirst/assets/img/opera.jpg" class="w3-image w3-padding" alt="opéra" id="portfolio-img" data-aos="fade-top">
             </article>
             <article class="w3-col m4 w3-center">
-            <h3><b>Concert</b></h3>
-            <img src="./mobileFirst/assets/img/concert.jpg" class="w3-image w3-padding" alt="concert" id="portfolio-img" data-aos="fade-left">
+            <h4><b>Concert</b></h4>
+            <img src="./mobileFirst/assets/img/concert.jpg" class="w3-image w3-padding" alt="concert" id="portfolio-img" data-aos="fade-top">
             
             </article>
 
             <article class="w3-col m4 w3-center">
-            <h3><b>Studio</b></h3>
-            <img src="./mobileFirst/assets/img/studio.jpg" class="w3-image w3-padding" alt="studio" id="portfolio-img" data-aos="fade-left"></article>
-             </div>  
+            <h4><b>Studio</b></h4>
+            <img src="./mobileFirst/assets/img/studio.jpg" class="w3-image w3-padding" alt="studio" id="portfolio-img" data-aos="fade-top"></article>
+            </div>  
         </section>
 
         <!-- SECTION CONTACT  -->
 
         <section id="contact"> 
             <div id="contact-en-tete" class="w3-display-container">
-            <h2 class="w3-display-middle">Contact</h2>
+            <h3 class="w3-display-middle w3-black w3-padding">Contact</h3>
             </div>
             
             <form class="w3-margin w3-hide-medium w3-hide-large"action="traitement_formulaire.php" method="POST" data-aos="zoom-in-down" data-aos-once="true">
@@ -268,67 +258,45 @@
                 <input type="email" id="email" name="email" required><br><br>
         
                 <label for="message">Message :</label><br>
-                <textarea id="message" name="message" ></textarea><br><br>
+                <textarea id="message" name="message"></textarea><br><br>
         
                 <input type="submit" value="Envoyer" class="w3-black w3-round-xxlarge">
-            </form>
-        </div>
+                </form>
+                </div>
 
-        </div>
+            </div>
         </section>
-
     </main>
 
    <!-- MAIN END  -->
 
-    <footer>
+   <footer>
 
-        <p class="w3-center">© POLYPHONIE RECORDS 2023</p>
+    <p class="w3-center">© POLYPHONIE RECORDS 2023</p>
 
-      <div class="w3-center">  
-        <img src="./mobileFirst/assets/img/facebook.svg" alt="logo Facebook" class="w3-image w3-center w3-margin-right">
-        <img src="./mobileFirst/assets/img/twitter.svg" alt="logo twitter" class="w3-image w3-center w3-margin-left">
-        </div>
+  <div class="w3-center">  
+    <img src="./mobileFirst/assets/img/facebook.svg" alt="logo Facebook" class="w3-image w3-center w3-margin-right">
+    <img src="./mobileFirst/assets/img/twitter.svg" alt="logo twitter" class="w3-image w3-center w3-margin-left">
+    </div>
 
-        <a href="#" class="w3-right">Mentions légales</a>
+    <a href="#" class="w3-right">Mentions légales</a>
 
-    </footer>
+</footer>
+  
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
       </script>
-
-</body>
-
 <script>
     function toggleNavBar() {
 
         const nav = document.getElementById("mobileNav");
         nav.classList.toggle("w3-show");
         console.log(nav.classList)
-        
         }
-
-    function homeHideNavbar(){
-        const nav = document.getElementById("mobileNav");
-
-        if (nav.classList.contains("w3-show")){
-            nav.classList.remove("w3-show");
-        }};
-
-    function btnShow() {
-       const btnTop = document.getElementById("btnToTop"); 
-
-        if (document.body.scrollTop > 50)
-        
-        {
-            btnTop.classList.add("w3-show")
-
-        }else{
-            btnTop.classList.add("w3-hide")
-        };
-    };
 </script>
+</body>
+
 
 </html>
