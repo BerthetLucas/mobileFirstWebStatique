@@ -176,7 +176,7 @@
         <i class="fa fa-bars" aria-hidden="true" style="color : white"></i>
         </a>
 
-        <a href="#home" class="w3-item w3-button" onclick="homeHideNavbar()"><img src="./mobileFirst/assets/img/logo.svg" id="logo"></a>
+        <a href="#home" class="w3-item w3-button" id="btnhome" onclick="homeHideNavbar()"><img src="./mobileFirst/assets/img/logo.svg" id="logo"></a>
         <a href="#about" class="w3-item w3-button w3-hide-small">About</a>
         <a href="#portfolio" class="w3-item w3-button w3-hide-small">Portfolio</a>
         <a href="#contact" class="w3-item w3-button w3-hide-small">Contact</a>
@@ -351,9 +351,15 @@
         }
 </script>
 
+<script>
+    function homeHideNavbar(){
 
+        const nav = document.getElementById("mobileNav");
+        nav.classList.remove("w3-show");
+        console.log(nav.classList)
+        }
+</script>
 
 </body>
-
 
 </html>
